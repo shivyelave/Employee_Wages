@@ -1,15 +1,47 @@
+'''
+
+
+    @Author: Shivraj Yelave
+    @Date: 31-07-24
+    @Last modified by: Shivraj Yelave
+    @Last modified time:
+    @Title: Employee Attendance
+
+
+'''
+
 import random
 
 def employee_attendance():
-    attendance = random.choice([0,1,2])
-    if attendance == 0:
-        return 0
-    if attendance == 1:
-        return 1
-    if attendance == 2:
-        return 2
+
+    """
+
+    Description:
+        Function to randomly determine an employee's attendance status.
+        0: Absent
+        1: Half-day
+        2: Present
+
+    Returns:
+        int: A random choice representing attendance status (0, 1, or 2).
     
+    """
+
+    # Randomly choose an attendance status from [0, 1, 2]
+    attendance = random.choice([0, 1, 2])
+    
+    # Return the corresponding attendance status
+    if attendance == 0:
+        return 0  # Absent
+    if attendance == 1:
+        return 1  # Half-day
+    if attendance == 2:
+        return 2  # Present
+
 def main():
+    # Call the employee_attendance function and print the result
     print(employee_attendance())
+
+# If this script is run as the main module, execute the main function
 if __name__ == '__main__':
     main()
